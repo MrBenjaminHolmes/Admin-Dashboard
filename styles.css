@@ -7,7 +7,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
@@ -56,10 +56,36 @@ li > svg {
     margin-right: 10px;
 }
 
+.Topheader>svg{
+    height: 32px;
+    width: 32px;
+    fill: black;
+    margin: 20px;
+    margin-left: 40px;
+}
+
 .topList {
     margin-bottom: 4vh;
 }
 
 li:hover{
     transform: scale(1.05);
+}
+
+input{
+    width: 50vw;
+    height: min-content;
+    align-self: center;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #d6d6d6;
+}
+
+.Topheader{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 200px;
+    grid-column-start: 2;
+    margin-top: 10px;
 }
