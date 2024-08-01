@@ -55,6 +55,13 @@ li > svg {
     fill: white;
     margin-right: 10px;
 }
+
+.card>div>svg
+{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
 .Topheader>svg,
 .userBar>svg {
     height: 32px;
@@ -190,12 +197,26 @@ button:hover{
 }
 
 .card{
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
     width: 20vw;
+    height: 32vh;
+    border-left: 10px solid #0ea5e9;
     background-color: #ffffff;
     border-radius: 8px;
     
 }
 
+.card>p,.card>h3{
+    margin: 20px;
+}
+
 h2{
     margin: 7px;
+}
+
+.cardBtns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
