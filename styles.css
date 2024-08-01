@@ -1,10 +1,12 @@
-* {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 6fr;
@@ -16,9 +18,8 @@
     color: white;
     padding: 10px;
     grid-row: 1/5;
-    height: 100vh;
+    overflow: auto;
 }
-
 .Title {
     display: flex;
     margin-bottom: 20px;
@@ -56,36 +57,67 @@ li > svg {
     margin-right: 10px;
 }
 
-.Topheader>svg{
+.Topheader>svg {
     height: 32px;
     width: 32px;
     fill: black;
     margin: 20px;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 .topList {
     margin-bottom: 4vh;
 }
 
-li:hover{
+li:hover {
     transform: scale(1.05);
 }
 
-input{
-    width: 50vw;
+input {
+    width: 40vw;
     height: min-content;
-    align-self: center;
+    width: 80%;
     padding: 10px;
     border-radius: 25px;
     border: none;
-    background-color: #d6d6d6;
+    background-color: #dfeaeb;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
-.Topheader{
+input:focus {
+    background-color: #dadada;
+    outline: none;
+}
+
+.Topheader {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 100px 200px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: min-content 6fr min-content min-content max-content;
     grid-column-start: 2;
-    margin-top: 10px;
+}
+
+.Topheader> * {
+    align-self: center;
+}
+
+img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.username {
+    font-size: 150%;
+    font-weight: 900;
+    justify-self: center;
+    margin: 20px;
+}
+
+.notification {
+    justify-self: flex-end;
+    position: relative;
+    cursor: pointer;
 }
