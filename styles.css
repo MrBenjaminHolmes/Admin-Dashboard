@@ -18,7 +18,7 @@ html, body {
     color: white;
     padding: 10px;
     grid-row: 1/5;
-    overflow: auto;
+
 }
 .Title {
     display: flex;
@@ -30,7 +30,7 @@ html, body {
 
 #logo {
     fill: white;
-    width: 3vw;
+    width: 3vh;
     margin-right: 12px;
 }
 
@@ -56,14 +56,19 @@ li > svg {
     fill: white;
     margin-right: 10px;
 }
-
-.Topheader>svg {
+.Topheader>svg,
+.userBar>svg {
     height: 32px;
     width: 32px;
     fill: black;
     margin: 20px;
     margin-left: 30px;
 }
+
+.userBar{
+    align-items: center;
+}
+
 
 .topList {
     margin-bottom: 4vh;
@@ -91,9 +96,10 @@ input:focus {
 }
 
 .Topheader {
+    box-shadow: 0 4px 2px -2px rgb(206, 206, 206);
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: min-content 6fr min-content min-content max-content;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: min-content 1fr max-content max-content;
     grid-column-start: 2;
 }
 
@@ -106,6 +112,9 @@ img {
     width: 55px;
     border-radius: 50%;
     margin: 10px;
+    justify-self: flex-end;
+    margin-right: 20px;
+    border: 2px solid #b8b8b8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -113,11 +122,53 @@ img {
     font-size: 150%;
     font-weight: 900;
     justify-self: center;
-    margin: 20px;
+    margin-right: 40px;
 }
 
 .notification {
     justify-self: flex-end;
     position: relative;
     cursor: pointer;
+}
+
+.profileBottom{
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    margin-left: 30px;
+}
+
+.welcomeMessage{
+    margin-top: 10px;
+    margin-left: 20px;
+    align-self: center;
+}
+
+.actionBtns{
+    display: flex;
+    grid-column: 3/6;
+}
+
+button{
+    border: none;
+    background-color:  #2d90e2;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    margin-right: 50px;
+    width: 6vw;
+}
+
+button:hover{
+    transform: scale(1.05);
+    
+}
+
+.userBar{
+    display: flex;
+    justify-self: flex-end;
+    grid-column: 3/6;
 }
