@@ -192,6 +192,7 @@ button:hover{
 .projects{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-row: 2/5;
     gap: 10px;
 }
@@ -199,8 +200,8 @@ button:hover{
 .card{
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
-    width: 20vw;
-    height: 32vh;
+    width: 15vw;
+    height: 20vh;
     border-left: 10px solid #0ea5e9;
     background-color: #ffffff;
     border-radius: 8px;
@@ -213,6 +214,8 @@ button:hover{
 
 h2{
     margin: 7px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .cardBtns{
