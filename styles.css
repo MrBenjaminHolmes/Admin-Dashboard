@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #e4e4e4;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -16,9 +17,10 @@ html, body {
     background-color: #0ea5e9;
     color: white;
     padding: 10px;
+    height: 100%;
     grid-row: 1/5;
-
 }
+
 .Title {
     display: flex;
     margin-bottom: 20px;
@@ -56,12 +58,12 @@ li > svg {
     margin-right: 10px;
 }
 
-.card>div>svg
-{
+.card>div>svg {
     height: 30px;
     width: 30px;
     margin: 10px;
 }
+
 .Topheader>svg,
 .userBar>svg {
     height: 32px;
@@ -71,10 +73,9 @@ li > svg {
     margin-left: 30px;
 }
 
-.userBar{
+.userBar {
     align-items: center;
 }
-
 
 .topList {
     margin-bottom: 4vh;
@@ -101,6 +102,7 @@ input:focus {
 }
 
 .Topheader {
+    background-color: white;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: min-content 1fr max-content max-content;
@@ -135,26 +137,26 @@ img {
     cursor: pointer;
 }
 
-.profileBottom{
+.profileBottom {
     height: 100px;
     width: 100px;
     margin-left: 30px;
 }
 
-.welcomeMessage{
+.welcomeMessage {
     margin-top: 10px;
     margin-left: 20px;
     align-self: center;
 }
 
-.actionBtns{
+.actionBtns {
     display: flex;
     grid-column: 3/6;
 }
 
-button{
+button {
     border: none;
-    background-color:  #2d90e2;
+    background-color: #2d90e2;
     padding: 10px;
     font-size: 20px;
     color: white;
@@ -165,65 +167,136 @@ button{
     width: 6vw;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
-    
 }
 
-.userBar{
+.userBar {
     display: flex;
     justify-self: flex-end;
     grid-column: 3/6;
 }
 
-.searchLogo{
+.searchLogo {
     justify-self: flex-end;
 }
 
-.mainContent{
+.mainContent {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: min-content 1fr 1fr 1fr;
+    grid-template-rows: min-content;
     background-color: #e4e4e4;
     box-sizing: border-box;
+    height: auto;
     padding-left: 30px;
 }
 
-.projects{
+.projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row: 2/5;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 15px;
 }
 
-.card{
+.card {
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
-    width: 15vw;
-    height: 20vh;
+    width: 25vw;
+    height: 25vh;
     border-left: 10px solid #0ea5e9;
     background-color: #ffffff;
     border-radius: 8px;
-    
 }
 
-.card>p,.card>h3{
+.card>p, .card>h3 {
     margin: 10px;
 }
 
-.card>p{
-    font-size: 12px;
+.card>p {
+    font-size: 18px;
+    color: #494949;
 }
 
-h2{
+h2 {
     margin: 7px;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
-.cardBtns{
+.cardBtns {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.announcementCard {
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    grid-column: 2/3;
+    grid-template-rows: min-content 1fr 1fr;
+    width: 60%;
+    height: 90%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trendingCard div
+.announcementCard>div {
+    margin-bottom: 10px;
+}
+
+.trendingCard h3,
+.announcementCard h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.announcementCard p {
+    font-size: 12px;
+    color: #666666;
+    border-bottom: 1px solid #6d6d6d;
+    padding-bottom: 10px;
+}
+
+.trendingCard div:last-child,
+.announcementCard div:last-child {
+    margin-bottom: 0;
+}
+
+.projectsTitle {
+    grid-column: 1/3;
+}
+
+.leftContent {
+    display: grid;
+    gap:15px;
+    grid-template-rows: min-content 1fr min-content 1fr;
+}
+
+.leftContent h2{
+    font-size: 24px;
+    grid-column: span 1/3;
+    text-align: center;
+}
+
+.trendingCard{
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    grid-column: 2/3;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    width: 45%;
+    height: 90%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trendingCard p {
+    color: #707070;
 }
